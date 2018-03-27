@@ -69,3 +69,8 @@ bolsa de golosinas compradas.
 es de las que a ella le gusta, y se enoja por las que faltan. Crear el mensaje
 golosinasFaltantes(golosinasDeseadas) , que devuelve las golosinas que Mariano
 no compró y que a Juliana le gustan
+* A veces juliana tiene antojos por gustos gustos especiales. Crear en mariano el mensaje
+gustosFaltantes(gustosDeseados) , que devuelve los gustos que Luciana quiere 
+pero que no está cubierto por ninguna golosina de las que tiene mariano.
+
+
