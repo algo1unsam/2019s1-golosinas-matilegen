@@ -51,22 +51,20 @@ Crear el objeto mariano con la capacidad de comprar golosinas:
 de golosinas compradas.
 * Entender el mensaje desechar(unaGolosina) , que desecha la golosina escogida de
 la bolsa de golosinas.
-* Entender el mensaje hayGolosinaSinTACC() , que indica si hay al menos una golosina
+* Entender el mensaje probarGolosinas() , que le da un mordisco a todas las golosinas
+dentro de la bolsa de golosinas compradas.
+Entender el mensaje hayGolosinaSinTACC() , que indica si hay al menos una golosina
 sin gluten en la bolsa de golosinas compradas.
-* Entender el mensaje golosinaMasCara() , que delvuelve la golosina mas cara en la
-bolsa de golosinas compradas.
-* Entender el mensaje golosinaCualquiera() , que devuelve una golosina cualquiera
-de la bolsa de golosinas compradas.
+* Entender el mensaje preciosCuidados() , que indica si todas las golosinas compradas
+tienen un precio menor o igual a 10 pesos.
 * Entender el mensaje golosinaDeSabor(unSabor) , que devuelve la primer golosina
 que encuentra en la bolsa del sabor escogido.
 * Entender el mensaje golosinasDeSabor(unSabor) , que devuelve las golosinas que
 encuentre dentro de la bolsa del sabor escogido.
-* Entender el mensaje preciosCuidados() , que indica si todas las golosinas compradas
-tienen un precio menor o igual a 10 pesos.
 * Entender el mensaje sabores() , que devuelve los sabores de las golosinas de la
 bolsa.
-* Entender el mensaje probarGolosinas() , que le da un mordisco a todas las golosinas
-dentro de la bolsa de golosinas compradas.
+* Entender el mensaje golosinaMasCara() , que delvuelve la golosina mas cara en la
+bolsa de golosinas compradas.
 * Juliana critica a Mariano, pero siempre que puede le quita alguna golosina si
 es de las que a ella le gusta, y se enoja por las que faltan. Crear el mensaje
 golosinasFaltantes(golosinasDeseadas) , que devuelve las golosinas que Mariano
