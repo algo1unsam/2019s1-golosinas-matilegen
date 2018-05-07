@@ -2,8 +2,6 @@ import golosinas.*
 
 describe "tests de mariano" {
 
-	var mariano
-
 	fixture {
 		chocolatin.pesoInicial(100)
 		mariano.comprar(chocolatin)

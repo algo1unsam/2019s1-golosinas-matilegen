@@ -2,6 +2,7 @@ object mariano {
 	
 	var golosinas = #{}
 
+
 	method comprar(_golosina) {
 		golosinas.add(_golosina)
 	}
@@ -233,8 +234,7 @@ object golosinaBaniada {
 
 object tutifrutti {
 	var libreDeGluten
-	var peso = 10
-	var gustos= ["frutilla", "naranja","chocolate"]
+	var gustos= ["frutilla", "chocolate","naranja"]
 	var mordiscos = 0
 	
 	method libreGluten(valor) {
@@ -245,14 +245,14 @@ object tutifrutti {
 	}
 	
 	method peso() {
-		return peso;
+		return 5;
 	}
 	
 	method mordisco() {
 		mordiscos = mordiscos + 1;
 	}	
 	method gusto() {
-		return gustos.get(gustos.size() % (mordiscos + 1))
+		return gustos.get(mordiscos % gustos.size())
 	}
 	
 	method libreGluten() {
