@@ -73,4 +73,6 @@ no compró y que a Juliana le gustan
 gustosFaltantes(gustosDeseados) , que devuelve los gustos que Luciana quiere 
 pero que no está cubierto por ninguna golosina de las que tiene mariano.
 
+En el branch 'herencia' se utiliza este ejericio para explicar clases y herencia. El enunciado en:
+https://objetos1wollokunq.gitlab.io/material/guia6-herencia.pdf
 
