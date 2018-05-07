@@ -168,6 +168,14 @@ class Caramelo {
 	}
 }
 
+class CarameloCorazonChocolate inherits Caramelo {
+	
+	override method mordisco() {
+		super()
+		gusto = "chocolate"	
+	}
+}
+
 class Chupetin {
 	var peso = 7
 	
