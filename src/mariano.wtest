@@ -2,8 +2,14 @@ import golosinas.*
 
 describe "tests de mariano" {
 
+
+	var chocolatin = new Chocolatin(pesoInicial=100)
+	var caramelo = new Caramelo()
+	var bombon = new Bombon()
+	var alfajor = new Alfajor()
+	var chupetin = new Chupetin()
+	
 	fixture {
-		chocolatin.pesoInicial(100)
 		mariano.comprar(chocolatin)
 		mariano.comprar(caramelo)
 		mariano.comprar(bombon)
