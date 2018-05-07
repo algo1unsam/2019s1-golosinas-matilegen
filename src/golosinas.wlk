@@ -90,6 +90,29 @@ class Chocolatin {
 	}
 }
 
+object heladera {
+	var property coeficiente = 0.5
+}
+
+class ChocolatinVip inherits Chocolatin {
+	var contenedor = heladera
+	
+	override method peso() {
+		return super() * (1 + self.humedad())
+	}
+	
+	method humedad() {
+		return contenedor.coeficiente()
+	}
+}
+class ChocolatinPremium inherits ChocolatinVip {
+	
+	override method humedad() {
+		return super() / 2
+	}
+}
+
+
 class Bombon {
 	var peso = 15
 	
