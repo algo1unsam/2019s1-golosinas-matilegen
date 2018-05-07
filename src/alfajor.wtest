@@ -2,7 +2,7 @@ import golosinas.*
 
 describe "test de chocolatin"{
 
-	var golosina = alfajor
+	var golosina = new Alfajor()
 	
 
 	test "peso" {

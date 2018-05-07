@@ -2,11 +2,8 @@ import golosinas.*
 
 describe "test de chocolatin"{
 
-	var golosina = chocolatin
+	var golosina = new Chocolatin(pesoInicial=100)
 	
-	fixture {
-		golosina.pesoInicial(100)		
-	}
 
 	test "peso" {
 		assert.equals(100, golosina.peso())

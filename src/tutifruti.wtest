@@ -2,7 +2,7 @@ import golosinas.*
 
 describe "test de chocolatin"{
 
-	var golosina = tutifrutti
+	var golosina = new Tutifrutti()
 	
 	fixture {
 		golosina.libreGluten(true)

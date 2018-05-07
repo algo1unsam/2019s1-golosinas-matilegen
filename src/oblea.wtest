@@ -2,7 +2,7 @@ import golosinas.*
 
 describe "test de chocolatin"{
 
-	var golosina = oblea
+	var golosina = new Oblea()
 	
 
 	test "peso" {
