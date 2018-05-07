@@ -11,6 +11,13 @@ object mariano {
 		golosinas.remove(_golosina)
 	}
 	
+	method baniar(_golosina) {
+		var nuevaGolosina = new GolosinaBaniada(golosina=_golosina)
+		golosinas.remove(_golosina) //si no está esta línea no tiene efecto alguno
+		golosinas.add(nuevaGolosina)
+	}
+	
+	
 	method probarGolosinas() {
 		golosinas.forEach( {_golosina => _golosina.mordisco() } )
 	}

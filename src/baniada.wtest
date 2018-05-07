@@ -4,8 +4,6 @@ describe "test de golosina baniada"{
 
 	var gol = new GolosinaBaniada(golosina=new Oblea())
 	
-	
-
 	test "peso" {
 		assert.equals(254, gol.peso())
 	}
