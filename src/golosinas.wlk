@@ -113,6 +113,14 @@ class Bombon {
 	}
 }
 
+class BombonDuro inherits Bombon {
+	
+	override method mordisco() {
+		peso = peso * 0.9
+	}
+}
+
+
 class Alfajor {
 	var peso = 300
 	
