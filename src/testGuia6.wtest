@@ -1,5 +1,5 @@
 import golosinas.*
-test "testX" {
+test "baniar bolosina" {
 
 	var caramelo = new Caramelo()
 	var bombon = new Bombon()
@@ -15,4 +15,12 @@ test "testX" {
    //hago una cuenta con los precios de la golosina
    	assert.equals( 10, mariano.golosinas().sum({g => g.precio()}))
 
+}
+
+test "distintos gustos de caramelo" {
+	
+	var caramelo = new Caramelo(gusto="chocolate")
+  	assert.equals( "chocolate", caramelo.gusto())
+	
+	
 }

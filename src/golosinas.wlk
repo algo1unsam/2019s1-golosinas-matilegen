@@ -138,6 +138,7 @@ class Alfajor {
 
 class Caramelo {
 	var peso = 5
+	var gusto = "frutilla"
 	
 	method precio() {
 		return 1
@@ -151,7 +152,7 @@ class Caramelo {
 		peso -= 1 
 	}	
 	method gusto() {
-		return "frutilla"
+		return gusto
 	}
 	
 	method libreGluten() {
