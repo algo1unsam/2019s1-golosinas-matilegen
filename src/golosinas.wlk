@@ -222,7 +222,19 @@ class Oblea {
 	}
 }
 
-
+class ObleaCrujiente inherits Oblea {
+	
+	var mordiscos = 0
+	
+	override method mordisco() {
+		super()
+		mordiscos += 1
+		if(mordiscos <= 3) {
+            peso -= 3			
+		}
+	} 
+	
+}
 
 class GolosinaBaniada {
 	var golosina
