@@ -1,17 +1,12 @@
 import golosinas.*
 
-describe "test de chocolatin"{
+describe "test de chocolatin" {
 
 	var golosina = alfajor
 	
-
-	test "peso" {
-		assert.equals(300, golosina.peso())
-	}
+	test "peso" { assert.equals(300, golosina.peso()) }
 	
-	test "precio" {
-		assert.equals(12, golosina.precio())
-	}
+	test "precio" { assert.equals(12, golosina.precio()) }
 	
 	test "mordisco" {
 		golosina.mordisco()

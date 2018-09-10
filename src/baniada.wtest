@@ -2,41 +2,38 @@ import golosinas.*
 
 describe "test de golosina baniada"{
 
-	var golosina = golosinaBaniada
-	
-	
 	fixture {
-		golosina.golosina(oblea)		
+		golosinaBaniada.golosina(oblea)		
 	}
 
 	test "peso" {
-		assert.equals(254, golosina.peso())
+		assert.equals(254, golosinaBaniada.peso())
 	}
 	
 	test "precio" {
-		assert.equals(7, golosina.precio())
+		assert.equals(7, golosinaBaniada.precio())
 	}
 	
 	test "mordisco" {
-		golosina.mordisco()
-		assert.equals(127, golosina.peso())
-		golosina.mordisco()
-		assert.equals(62.5, golosina.peso())
+		golosinaBaniada.mordisco()
+		assert.equals(127, golosinaBaniada.peso())
+		golosinaBaniada.mordisco()
+		assert.equals(62.5, golosinaBaniada.peso())
 	}
 	
 	
 	test "gusto" {
-		assert.equals("vainilla", golosina.gusto())
+		assert.equals("vainilla", golosinaBaniada.gusto())
 	}
 	
 	test "libre de gluten" {
-		assert.notThat(golosina.libreGluten())	
+		assert.notThat(golosinaBaniada.libreGluten())	
 	}
 	
 	test "libreTACC y gusto con otro relleno" {
-		golosina.golosina(bombon)
-		assert.that(golosina.libreGluten())	
-		assert.equals("frutilla", golosina.gusto())	
+		golosinaBaniada.golosina(bombon)
+		assert.that(golosinaBaniada.libreGluten())	
+		assert.equals("frutilla", golosinaBaniada.gusto())	
 		
 	}
 	
