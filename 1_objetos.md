@@ -59,6 +59,7 @@ Crear el objeto `mariano` con la capacidad de comprar golosinas, hacer cosas con
 * `sabores()` : que devuelve los sabores de las golosinas de la bolsa, idealmente sin repetidos. <br> 
   P.ej. aunque Mariano tenga tres golosinas de sabor naranja, en lo que devuelve `sabores()` el naranja debería aparecer una sola vez. <br> Una forma de resolver esto es usando **conjuntos**; revolver en el apunte sobre colecciones y closures: [https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf](https://objetos1wollokunq.gitlab.io/material/guia-colecciones-basicas.pdf).
 * `golosinaMasCara()` : devuelve la golosina mas cara en la bolsa de golosinas compradas.
+* `pesoGolosinas()` : devuelve el peso de la bolsa de golosinas compradas, o sea, la suma del peso de cada golosina. 
 
 Además, se deben contemplar dos situaciones relacionadas con _Juliana_, la pareja actual de Mariano. 
 * Juliana critica a Mariano, pero siempre que puede le quita alguna golosina si es de las que a ella le gusta, y se enoja por las que faltan. <br>

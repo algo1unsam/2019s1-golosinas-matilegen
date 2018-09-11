@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\carlos\educ\obj1\proyectosPrueba\golosinas\.2_clases_herencia.md.html</title>
+<title>D:\carlos\educ\obj1\proyectosPrueba\golosinas\.2_tests.md.html</title>
 
 
 <style type="text/css">
@@ -639,63 +639,12 @@ function setDocumentScrollTop(ypos)
 
 </head>
 <body class="markdown-body">
-<h2> <a id="parte-3-muchas-golosinas" class="anchor" href="#parte-3-muchas-golosinas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parte 3: muchas golosinas</h2> 
-<p>A partir de la soluci&oacute;n desarrollada en las partes 1 y 2, hacer las modificaciones necesarias para que Mariano pueda comprar varios bombones, chocolatines, caramelos, alfajores, chupetines, obleas, golosinas ba&ntilde;adas y/o pastillas tuttifruti.</p> 
-<p>Resolver adecuadamente los casos en los que hay que pasar par&aacute;metros en la inicializaci&oacute;n (el peso del chocolat&iacute;n y la golosina a ba&ntilde;ar).</p> 
-<br /> 
-<h3> <a id="ba&ntilde;ar-golosina" class="anchor" href="#ba%C3%B1ar-golosina" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ba&ntilde;ar Golosina</h3> 
-<p>Hacer que Mariano entienda el mensaje <code>baniar(unaGolosina)</code>. El m&eacute;todo construye una nueva golosina ba&ntilde;ada y la agrega a la colecci&oacute;n de las golosinas que compr&oacute; Mariano.</p> 
-<p>Pensar, haciendo un diagrama de objetos, qu&eacute; pasa si:</p> 
-<ol> 
- <li>la golosina ya era parte de la colecci&oacute;n.</li> 
- <li>se ba&ntilde;a una golosina ya ba&ntilde;ada.</li> 
-</ol> 
-<br /> 
-<h2> <a id="parte-4-m&aacute;s-variantes-de-golosinas" class="anchor" href="#parte-4-m%C3%A1s-variantes-de-golosinas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parte 4: m&aacute;s variantes de golosinas</h2> 
-<h3> <a id="caramelos-de-distintos-sabores" class="anchor" href="#caramelos-de-distintos-sabores" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Caramelos de distintos sabores</h3> 
-<p>Hacer que pueda haber caramelos de frutilla, naranja, y chocolate. Cuando se construye el caramelo se le indica de que gusto es.</p> 
-<h3> <a id="bombones-duros" class="anchor" href="#bombones-duros" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bombones duros</h3> 
-<p>Los bombones duros son bombones (tienen las mismas reglas para el precio y gusto) pero cuando reciben un mordisco, en lugar de comportarse como el resto de los bombones, pierden el 10% de su peso</p> 
-<p>Indicar en cu&aacute;l clase se encuentra el m&eacute;todo que se ejecuta en cada caso, detallando el recorrido que realiza el method lookup.</p> 
-<pre><code>var bombon = new Bombon() 
-bombon.mordisco() 
-bombon.peso() 
-bombon = new BombonDuro() 
-bombon.mordisco() 
-bombon.peso() 
-</code></pre> 
-<h3> <a id="caramelos-con-coraz&oacute;n-de-chocolate-rellenos" class="anchor" href="#caramelos-con-coraz%C3%B3n-de-chocolate-rellenos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Caramelos con coraz&oacute;n de chocolate (Rellenos)</h3> 
-<p>Los caramelos con coraz&oacute;n de chocolate son caramelos que al recibir un mordisco, adem&aacute;s de comportarse como todos los caramelos cambian su sabor a chocolate</p> 
-<p>Indicar en cu&aacute;l clase se encuentra el m&eacute;todo que se ejecuta en cada caso, detallando el recorrido que realiza el method lookup.</p> 
-<pre><code>var caramelo = new Caramelo() 
-caramelo.mordisco() 
-caramelo.peso() 
-caramelo.sabor() 
-caramelo = new CarameloRelleno() 
-caramelo.mordisco() 
-caramelo.peso() 
-caramelo.sabor()
-</code></pre> 
-<h3> <a id="obleas-crujientes" class="anchor" href="#obleas-crujientes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Obleas Crujientes</h3> 
-<p>Las obleas crujientes son como todas las obleas y cuando reciben un mordisco pierden el peso que pierden todas las obleas (50% si el peso es mayor a 70g o 25% si es menor). Pero, en los primeros 3 mordiscos pierde 3 gramos adicionales.</p> 
-<p>Indicar en cu&aacute;l clase se encuentra el m&eacute;todo que se ejecuta en cada caso, detallando el recorrido que realiza el method lookup.</p> 
-<pre><code>var oblea = new Oblea() 
-oblea.mordisco() 
-oblea.peso() 
-oblea = new ObleaCrujiente() 
-oblea.mordisco() 
-oblea.peso() 
-</code></pre> 
-<h3> <a id="chocolatines-vip-y--chocolatines-premium" class="anchor" href="#chocolatines-vip-y--chocolatines-premium" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chocolatines VIP y Chocolatines Premium</h3> 
-<p>Los chocolatines VIP, son como todos los chocolatines, pero se guardan en una heladera que aporta un coeficiente de humedad (un n&uacute;mero entre 0 y 1). Este coeficiente est&aacute; involucrado para el c&aacute;lculo del peso: El peso de un chocolatin VIP es el peso que tendr&iacute;a un Chocolat&iacute;n cualquiera: <code>(pesoInicial - gramosConsumidos)</code> multiplicado por <code>1 + humedad</code>.</p> 
-<p>Los chocolatines Premium son un tipo especial de chocolatines VIP que vienen con una cobertura especial que los hace m&aacute;s resistentes a la humedad. Por lo tanto, La humedad en estos chocolatines es la mitad de la humedad de los chocolatines VIP.</p> 
-<p>Indicar en cu&aacute;l clase se encuentra el m&eacute;todo que se ejecuta en cada caso, detallando el recorrido que realiza el method lookup.</p> 
-<pre><code>var chocolatin = new Chocolatin() 
-chocolatin.peso() 
-chocolatin = new ChocolatinVIP() 
-chocolatin.peso() 
-chocolatin = new ChocolatinPremium() 
-chocolatin.peso() 
-</code></pre>
+<h1> <a id="tests-sobre-las-partes-3-y-4" class="anchor" href="#tests-sobre-las-partes-3-y-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests sobre las partes 3 y 4</h1> 
+<h2> <a id="test-de-mariano-con-varias-golosinas-del-mismo-tipo" class="anchor" href="#test-de-mariano-con-varias-golosinas-del-mismo-tipo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test de Mariano con varias golosinas del mismo tipo.</h2> 
+<p>Escribir un test en el cual Mariano compre dos bombones, un chocolat&iacute;n de 50 gramos, un chocolat&iacute;n de 10 gramos, dos chupetines ba&ntilde;ados, y una pastilla tutti-frutti. Para ba&ntilde;ar a los chupetines, usar el m&eacute;todo <code>baniar(unaGolosina)</code> que debe agregarse a la definici&oacute;n de Mariano.</p> 
+<p>Probar en particular los siguientes m&eacute;todos definidos para Mariano: <code>probarGolosinas()</code>, <code>hayGolosinasSinTACC()</code>, <code>golosinasDeSabor(unSabor)</code> (probar con distintos sabores), <code>pesoGolosinas()</code>.</p> 
+<p>Darle un mordisco al chocolat&iacute;n de 50 gramos, y verificar c&oacute;mo var&iacute;a el <code>pesoGolosinas()</code>. Para esto, hay que quedarse con una referencia al chocolat&iacute;n, <em>aparte</em> de la que tiene la colecci&oacute;n de Mariano. Armar un diagrama de objetos que refleje c&oacute;mo quedan Mariano, sus golosinas, y la referencia desde el test al chocolat&iacute;n.</p> 
+<h2> <a id="tests-de-variantes-de-golosinas" class="anchor" href="#tests-de-variantes-de-golosinas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests de variantes de golosinas</h2> 
+<p>Escribir un test para cada secci&oacute;n de c&oacute;digo incluida en la parte 4 del enunciado, calculando cu&aacute;l debe ser el peso (y el sabor en el caso de los caramelos rellenos) de las golosinas creadas.</p>
 </body>
 </html>
