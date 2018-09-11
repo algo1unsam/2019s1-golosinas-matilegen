@@ -28,7 +28,7 @@ Vale 5 pesos y pesa inicialmente 250 gramos. Su gusto es vainilla. No es libre d
 Al recibir un mordisco pierde peso, en una cantidad que depende del peso actual: si es mayor a 70 gramos pierde el 50 % de su peso, en caso contrario, el 25 %.
 
 #### Chocolatín
-El peso inicial es desconocido, lo asigna el usuario. El precio es de $0,50 por cada gramo de peso inicial. No es libre de gluten.   
+El peso inicial es desconocido, lo asigna el usuario. El precio es de $0,50 por cada gramo de peso inicial. No es libre de gluten. Obviamente, su gusto es chocolate.   
 Pierde 2 gramos por mordisco.   
 **¡Atención!** El precio es según el _peso inicial_, no debe cambiar con los mordiscos.
 
