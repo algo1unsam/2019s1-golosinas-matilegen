@@ -25,4 +25,57 @@ describe "test de bombon" {
 		assert.that(bombon.libreGluten())	
 	}
 	
+	test "peso inicial de golosinaBaniada" {
+		golosinaBaniada.baniaA(bombon)
+		assert.equals(19, golosinaBaniada.peso())
+	}
+	
+	test "precio de golosinaBaniada" {
+		golosinaBaniada.baniaA(bombon)
+		assert.equals(7, golosinaBaniada.precio())
+	}
+	
+	test "mordiscos de golosinaBaniada" {
+		golosinaBaniada.baniaA(bombon)
+		golosinaBaniada.mordisco()
+		assert.equals(17, golosinaBaniada.peso())
+		golosinaBaniada.mordisco()
+		assert.equals(7.8, golosinaBaniada.peso())
+	}
+	
+	test "gusto de golosinaBaniada" {
+		golosinaBaniada.baniaA(bombon)
+		assert.equals("frutilla", golosinaBaniada.gusto())
+	}
+	
+	test "libre de gluten de golosinaBaniada" {
+		golosinaBaniada.baniaA(bombon)
+		assert.that(golosinaBaniada.libreGluten())	
+	}
+	test "peso inicial de tuttifrutti" {
+		
+		assert.equals(5, tuttifrutti.peso())
+	}
+	
+	test "precio de tuttifrutti" {
+	
+		assert.equals(10, tuttifrutti.precio())
+	}
+	
+	test "mordiscos de tuttifrutti" {
+		tuttifrutti.mordisco()
+		assert.equals("frutilla", tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		assert.equals(naranja, tuttifrutti.gusto())
+	}
+	
+	test "gusto de tuttifrutti" {
+		
+		assert.equals("frutilla", tuttifrutti.gusto())
+	}
+	
+	test "libre de gluten de tuttifrutti" {
+	
+		assert.that(tuttifrutti.libreGluten())	
+	}	
 }

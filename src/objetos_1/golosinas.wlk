@@ -87,17 +87,24 @@ object golosinaBaniada {
 
 object tuttifrutti {
 	var peso=5
-	var property libreGruten= false
+	var gusto=frutilla
+	var property libreGluten= false
 	method peso()= peso
-	method precio()=if(libreGruten) 7 else 10
-	method gusto()=ruleta.gira()
+	method precio()=if(libreGluten) 7 else 10
+	method gusto()=gusto
+	method mordisco(){
+		gusto=ruleta.gira()
+	}
+	method libreGluten() {return  libreGluten}	
 }
 object ruleta{
 	var gusto=frutilla
 	method gira(){
 		var gus
-		gus=gusto.siguiente()
+		gus=gusto
+		gusto=gusto.siguiente()
 		return gus
+		
 	}
 }
 object frutilla{

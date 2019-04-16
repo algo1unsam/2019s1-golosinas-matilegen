@@ -13,7 +13,14 @@ object mariano {
 	method bolsaGolosina()=bolsaGolosinas
 	method probarGolosinas() { bolsaGolosinas.forEach({golosinas=>golosinas.mordisco()}) }
 	method hayGolosinaSinTACC(){
-		bolsaGolosinas.any(false,{golosina=>golosina.libreGluten()})
+		bolsaGolosinas.any({golosina=>lebreDeGluten.compruebo(golosina)})
+	}
+	method preciosCuidados() { bolsaGolosinas.forEach({golosinas=>golosinas.precio()<10 }
+}
+object lebreDeGluten{
+	method compruebo(golosina){
+		if(golosina.libreGluten()){
+			console.println(golosina)
+		}
 	}
 }
-
