@@ -79,3 +79,6 @@ describe "test de bombon" {
 		assert.that(tuttifrutti.libreGluten())	
 	}	
 }
+describe "alfajor"{
+	
+}
