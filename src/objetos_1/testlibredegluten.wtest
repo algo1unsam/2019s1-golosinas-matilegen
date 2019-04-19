@@ -1,6 +1,42 @@
+import golosinas.*
 
-test "testX" {
+describe "test de libreGluten" {
 
-	assert.that(true)
+	test "es libreGluten el bombon" {
+		assert.that(bombon.libreGluten())
+	}
+
+	test "es libreGluten el alfajor" {
+		assert.notThat(alfajor.libreGluten())
+	}
+
+	test "es libreGluten el caramelo" {
+		assert.that(caramelo.libreGluten())
+	}
+
+	test "es libreGluten el chupetin" {
+		assert.that(chupetin.libreGluten())
+	}
+
+	test "es libreGluten el oblea" {
+		assert.notThat(oblea.libreGluten())
+	}
+
+	test "es libreGluten el chocolatin" {
+		assert.notThat(chocolatin.libreGluten())
+	}
+
+	test "es libreGluten el golosinaBaniada" {
+		golosinaBaniada.baniaA(caramelo)
+		assert.that(golosinaBaniada.libreGluten())
+	}
+
+	test "es libreGluten el tuttifrutti" {
+		assert.notThat(tuttifrutti.libreGluten())
+	}
+	test "es libreGluten el tuttifrutti 2" {
+		tuttifrutti.libreGluten(true)
+		assert.that(tuttifrutti.libreGluten())
+	}
 
 }
