@@ -1,4 +1,5 @@
 import golosinas.*
+import juliana.*
 
 object mariano {
 
@@ -54,8 +55,8 @@ object mariano {
 	}
 
 	method golosinasFaltantes(param1) {
-			return bolsaGolosinas.filter({})
-		}
+		return bolsaGolosinas.any({ golosina => golosina.nombre() == param1 })
+	}
 
 }
 
