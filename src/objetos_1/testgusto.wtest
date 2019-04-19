@@ -1,0 +1,44 @@
+import golosinas.*
+
+describe "test de bombon" {
+
+	test "peso bombon" {
+		assert.equals(15, bombon.peso())
+	}
+
+	test "peso alfajor" {
+		assert.equals(300, alfajor.peso())
+	}
+
+	test "peso caramelo" {
+		assert.equals(5, caramelo.peso())
+	}
+
+	test "peso chupetin" {
+		assert.equals(7, chupetin.peso())
+	}
+
+	test "peso oblea" {
+		assert.equals(250,  oblea.peso())
+	}
+
+	test "peso inicial chocolatin" {
+		chocolatin.pesoInicial(100)
+		assert.equals(100, chocolatin.pesoInicial())
+	}
+		test "peso actual chocolatin" {
+		chocolatin.pesoInicial(100)
+		assert.equals(100, chocolatin.pesoActual())
+	}
+
+	test "peso golosinaBaniada" {
+		golosinaBaniada.baniaA(caramelo)
+		assert.equals(9, golosinaBaniada.peso())
+	}
+
+	test "peso tuttifrutti" {
+		assert.equals(5, tuttifrutti.peso())
+	}
+
+}
+

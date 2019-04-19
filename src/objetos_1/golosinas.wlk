@@ -159,7 +159,8 @@ object chocolatin {
 		pesoInicial = cuanto
 		pesoActual = cuanto
 	}
-
+	method pesoInicial()=pesoInicial
+	method pesoActual()=pesoActual
 	method precio() {
 		return pesoInicial * 0.5
 	}
@@ -171,6 +172,7 @@ object chocolatin {
 	method gusto() {
 		return "chocolate"
 	}
+
 
 	method mordisco() {
 		pesoActual = pesoActual - 2
