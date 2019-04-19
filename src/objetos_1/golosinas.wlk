@@ -247,7 +247,7 @@ object ruleta {
 
 	method gira() {
 		var gus
-		gus = gusto
+		gus= gusto
 		gusto = gusto.siguiente()
 		return gus
 	}

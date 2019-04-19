@@ -1,6 +1,78 @@
+import golosinas.*
 
-test "testX" {
+describe "test de mordisco" {
 
-	assert.that(true)
+	test "peso despues del mordisco bombon" {
+		bombon.mordisco()
+		assert.equals(11, bombon.peso())
+	}
 
+	test "peso despues del mordisco alfajor" {
+		alfajor.mordisco()
+		assert.equals(240, alfajor.peso())
+	}
+
+	test "peso despues del mordisco caramelo" {
+		caramelo.mordisco()
+		assert.equals(4, caramelo.peso())
+	}
+
+	test "peso despues del mordisco chupetin" {
+		chupetin.mordisco()
+		assert.equals(6.3, chupetin.peso())
+	}
+
+	test "peso despues del mordisco oblea" {
+		oblea.mordisco()
+		assert.equals(125, oblea.peso())
+	}
+
+	test "peso actual chocolatin" {
+		chocolatin.pesoInicial(100)
+		assert.equals(100, chocolatin.pesoActual())
+	}
+
+	test "peso actual despues del mordisco chocolatin" {
+		chocolatin.pesoInicial(100)
+		chocolatin.mordisco()
+		assert.equals(98, chocolatin.pesoActual())
+	}
+
+	test "peso despues del mordisco 1 golosinaBaniada" {
+		golosinaBaniada.baniaA(caramelo)
+		golosinaBaniada.mordisco()
+		assert.equals(6, golosinaBaniada.peso())
+	}
+
+	test "peso despues del mordisco 2 golosinaBaniada" {
+		golosinaBaniada.baniaA(caramelo)
+		golosinaBaniada.mordisco()
+		golosinaBaniada.mordisco()
+		assert.equals(3, golosinaBaniada.peso())
+	}
+
+	test "peso despues del mordisco 3 golosinaBaniada" {
+		golosinaBaniada.baniaA(caramelo)
+		golosinaBaniada.mordisco()
+		golosinaBaniada.mordisco()
+		golosinaBaniada.mordisco()
+		assert.equals(2, golosinaBaniada.peso())
+	}
+
+	test "peso despues del mordisco 1 tuttifrutti" {
+		tuttifrutti.mordisco()
+		assert.equals(frutilla,tuttifrutti.gusto())
+	}
+	test "peso despues del mordisco 2 tuttifrutti" {
+		tuttifrutti.mordisco()
+		tuttifrutti.mordisco()
+		assert.equals(naranja,tuttifrutti.gusto())
+	}
+	test "peso despues del mordisco 3 tuttifrutti" {
+		tuttifrutti.mordisco()
+		tuttifrutti.mordisco()
+		tuttifrutti.mordisco()
+		assert.equals(chocolate,tuttifrutti.gusto())
+	}
 }
+
