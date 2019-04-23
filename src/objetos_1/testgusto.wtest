@@ -2,42 +2,37 @@ import golosinas.*
 
 describe "test de gustos" {
 
-	test "peso bombon" {
-		assert.equals(15, bombon.peso())
+	test "gusto del bombon" {
+		assert.equals("frutilla", bombon.gusto())
 	}
 
-	test "peso alfajor" {
-		assert.equals(300, alfajor.peso())
+	test "gusto del  alfajor" {
+		assert.equals("chocolate", alfajor.gusto())
 	}
 
-	test "peso caramelo" {
-		assert.equals(5, caramelo.peso())
+	test "gusto del caramelo" {
+		assert.equals("frutilla", caramelo.gusto())
 	}
 
-	test "peso chupetin" {
-		assert.equals(7, chupetin.peso())
+	test "gusto del chupetin" {
+		assert.equals("naranja", chupetin.gusto())
 	}
 
-	test "peso oblea" {
-		assert.equals(250,  oblea.peso())
+	test "gusto de la oblea" {
+		assert.equals("vainilla",  oblea.gusto())
 	}
 
-	test "peso inicial chocolatin" {
-		chocolatin.pesoInicial(100)
-		assert.equals(100, chocolatin.pesoInicial())
-	}
-		test "peso actual chocolatin" {
-		chocolatin.pesoInicial(100)
-		assert.equals(100, chocolatin.pesoActual())
+	test "gusto del chocolatin" {
+		assert.equals("chocolate", chocolatin.gusto())
 	}
 
-	test "peso golosinaBaniada" {
+	test "gusto de la  golosinaBaniada" {
 		golosinaBaniada.baniaA(caramelo)
-		assert.equals(9, golosinaBaniada.peso())
+		assert.equals("frutilla", golosinaBaniada.gusto())
 	}
 
-	test "peso tuttifrutti" {
-		assert.equals(5, tuttifrutti.peso())
+	test "gusto del tuttifrutti" {
+		assert.equals(frutilla, tuttifrutti.gusto())
 	}
 
 }
