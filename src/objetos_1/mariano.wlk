@@ -55,8 +55,11 @@ object mariano {
 	}
 
 	method golosinasFaltantes(param1) {
-		return bolsaGolosinas.any({ golosina => golosina.nombre() == param1 })
+		return bolsaGolosinas.filter({ golosina => bolsaGolosinas.contain(golosina) != param1 })
+		method golosinasQueTiene(gusto) {
+			
+		return bolsaGolosinas.filter({ golosina => bolsaGolosinas.contain(golosina) })
+		}
 	}
-
-}
-
+	
+	}

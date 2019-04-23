@@ -1,6 +1,44 @@
+import golosinas.*
 
-test "testX" {
+describe "test de precio" {
 
-	assert.that(true)
+	test "precio del bombon" {
+		assert.equals(5, bombon.precio())
+	}
+
+	test "precio del alfajor" {
+		assert.equals(12, alfajor.precio())
+	}
+
+	test "precio del caramelo" {
+		assert.equals(1, caramelo.precio())
+	}
+
+	test "precio del chupetin" {
+		assert.equals(2, chupetin.precio())
+	}
+
+	test "precio de la  oblea" {
+		assert.equals(5,  oblea.precio())
+	}
+
+	test "precio del chocolatin" {
+		chocolatin.pesoInicial(100)
+		assert.equals(50, chocolatin.precio())
+	}
+
+	test "precio de la  golosinaBaniada" {
+		golosinaBaniada.baniaA(caramelo)
+		assert.equals(3, golosinaBaniada.precio())
+	}
+
+	test "precio del tuttifrutti" {
+		assert.equals(10, tuttifrutti.precio())
+	}
+	test "precio del tuttifrutti libre de gluten" {
+		tuttifrutti.libreGluten(true)
+		assert.equals(7, tuttifrutti.precio())
+	}
 
 }
+
