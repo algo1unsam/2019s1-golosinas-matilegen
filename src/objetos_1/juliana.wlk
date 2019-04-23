@@ -1,17 +1,25 @@
 import mariano.*
+import golosinas.*
 object juliana {
 
 	var gustos = #{}
 	var bolsaGolosinas=#{}
+	var golosinasQueFaltan=#{}
 
 	method gustosDeseados(golosina) {
 		gustos.add(golosina)
 	}
 	method golosinasMariano(){
-		bolsaGolosinas=mariano.golosinasQueTiene(gustos)
+		bolsaGolosinas.add(mariano.golosinasQueTiene(gustos))
+		
 	}
 	method golosinaQueFaltan(){
-		return mariano.golosinasFaltantes(bolsaGolosinas)
+		golosinasQueFaltan.add(gustos)
+		golosinasQueFaltan.remove(mariano.golosinasFaltantes(gustos))
 	}
+	method golosinas(){
+		return golosinasQueFaltan
+	}
+	method bolsaGolosinas()=bolsaGolosinas
 }
 

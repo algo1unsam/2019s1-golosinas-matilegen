@@ -1,0 +1,28 @@
+import golosinas.*
+import juliana.*
+import mariano.*
+
+describe "test golosinas de ambos" {
+
+	fixture {
+		mariano.comprar(alfajor)
+		mariano.comprar(bombon)
+		mariano.comprar(caramelo)
+		juliana.gustosDeseados(bombon)
+		juliana.gustosDeseados(tuttifrutti)
+		juliana.golosinasMariano()
+		
+	}
+
+	test "golosinas que quiere juliana y mariano tiene" {
+		assert.equals(bombon, juliana.bolsaGolosinas())
+		
+	}
+	test "golosinas que quiere juliana y mariano no tiene" {
+		juliana.golosinaQueFaltan()
+		assert.equals(tuttifrutti, juliana.golosinas())
+		
+	}
+
+}
+

@@ -54,12 +54,20 @@ object mariano {
 		return bolsaGolosinas.sum{ golosina => golosina.peso() }
 	}
 
-	method golosinasFaltantes(param1) {
-		return bolsaGolosinas.filter({ golosina => bolsaGolosinas.contain(golosina) != param1 })
-		method golosinasQueTiene(gusto) {
-			
-		return bolsaGolosinas.filter({ golosina => bolsaGolosinas.contain(golosina) })
-		}
+	method golosinasFaltantes(golosinasDeseadas) {
+		
+		return self.comparo(golosinasDeseadas)
+		
 	}
-	
+
+	method golosinasQueTiene(gusto) {
+		var gustos=#{}
+		gustos=self.comparo(gusto)
+		bolsaGolosinas.remove(gustos)
+		return gustos
 	}
+	method comparo(gusto){
+		return gusto.filter({ golosina => bolsaGolosinas.contains(golosina) })
+	}
+}
+
