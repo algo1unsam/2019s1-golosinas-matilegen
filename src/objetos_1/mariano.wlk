@@ -56,7 +56,7 @@ object mariano {
 
 	method golosinasFaltantes(golosinasDeseadas) {
 		
-		return self.comparo(golosinasDeseadas)
+		return bolsaGolosinas.differents(golosinasDeseadas)
 		
 	}
 

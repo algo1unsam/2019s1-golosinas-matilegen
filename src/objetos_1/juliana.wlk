@@ -14,8 +14,8 @@ object juliana {
 		
 	}
 	method golosinaQueFaltan(){
-		golosinasQueFaltan.add(gustos)
-		golosinasQueFaltan.remove(mariano.golosinasFaltantes(gustos))
+		
+		golosinasQueFaltan.add(mariano.golosinasFaltantes(gustos))
 	}
 	method golosinas(){
 		return golosinasQueFaltan

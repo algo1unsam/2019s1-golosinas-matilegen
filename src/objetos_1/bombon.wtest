@@ -38,7 +38,7 @@ describe "test de bombon" {
 	test "mordiscos de golosinaBaniada" {
 		golosinaBaniada.baniaA(bombon)
 		golosinaBaniada.mordisco()
-		assert.equals(17, golosinaBaniada.peso())
+		assert.equals(13, golosinaBaniada.peso())
 		golosinaBaniada.mordisco()
 		assert.equals(7.8, golosinaBaniada.peso())
 	}
@@ -64,18 +64,18 @@ describe "test de bombon" {
 	
 	test "mordiscos de tuttifrutti" {
 		tuttifrutti.mordisco()
-		assert.equals("frutilla", tuttifrutti.gusto())
+		assert.equals(frutilla, tuttifrutti.gusto())
 		tuttifrutti.mordisco()
 		assert.equals(naranja, tuttifrutti.gusto())
 	}
 	
 	test "gusto de tuttifrutti" {
-		
-		assert.equals("frutilla", tuttifrutti.gusto())
+
+		assert.equals(frutilla, tuttifrutti.gusto())
 	}
 	
 	test "libre de gluten de tuttifrutti" {
-	
+			tuttifrutti.libreGluten(true)
 		assert.that(tuttifrutti.libreGluten())	
 	}	
 }
