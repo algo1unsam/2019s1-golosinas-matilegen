@@ -1,6 +1,4 @@
 import golosinas.*
-import juliana.*
-
 object mariano {
 
 	// para este objeto no damos pistas
@@ -56,8 +54,11 @@ object mariano {
 
 	method golosinasFaltantes(golosinasDeseadas) {
 		
-		return bolsaGolosinas.differents(golosinasDeseadas)
+		return golosinasDeseadas.differents(bolsaGolosinas)
 		
+	}
+	method gustosFaltantes(gustosDeseados){
+		return bolsaGolosinas.differents(gustosDeseados.maps({golosinas=>golosinas.gusto()}))
 	}
 
 	method golosinasQueTiene(gusto) {
