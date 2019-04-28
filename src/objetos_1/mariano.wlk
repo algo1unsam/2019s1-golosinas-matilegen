@@ -3,18 +3,25 @@ object mariano {
 
 	// para este objeto no damos pistas
 	// definimos algunos métodos para que compile el test
-	var bolsaGolosinas = #{}
+	var bolsaGolosinas = []
 	var gustosBolsa	= #{}
 	method comprar(golosina) {
 		bolsaGolosinas.add(golosina)
 		gustosBolsa.add(golosina.gusto())
+	}
+	method _comprar(golosina) {
+		bolsaGolosinas.addAll(golosina)
+		gustosBolsa.addAll(golosina.gusto())
 	}
 
 	method desechar(golosina) {
 		bolsaGolosinas.remove(golosina)
 			gustosBolsa.remove(golosina.gusto())
 	}
-
+	method _desechar(golosina) {
+		bolsaGolosinas.removeAll(golosina)
+			gustosBolsa.removeAll(golosina.gusto())
+	}
 	method golosinas() {
 		/* cambiar por la implementacion correcta */
 		return []
@@ -72,6 +79,10 @@ object mariano {
 	}
 	method comparo(gusto){
 		return gusto.filter({ golosina => bolsaGolosinas.contains(golosina) })
+	}
+	method baniar(unaGolosina){
+		golosinaBaniada.baniaA(unaGolosina)
+		bolsaGolosinas.add(golosinaBaniada)
 	}
 }
 

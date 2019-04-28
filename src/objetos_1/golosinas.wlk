@@ -1,5 +1,5 @@
 object bombon {
-
+	var tipo="blando"
 	var peso = 15
 
 	method nombre() = self
@@ -13,7 +13,7 @@ object bombon {
 	}
 
 	method mordisco() {
-		peso = peso * 0.8 - 1
+		if(tipo=="blando")peso = peso * 0.8 - 1 else peso=peso*0.9
 	}
 
 	method gusto() {
@@ -22,6 +22,9 @@ object bombon {
 
 	method libreGluten() {
 		return true
+	}
+	method newBombonDuro(){
+		tipo="duro"
 	}
 
 }
@@ -183,7 +186,7 @@ object chocolatin {
 object golosinaBaniada {
 
 	var golosinaInterior
-	var pesoBanio = 4
+	var property pesoBanio = 4
 
 	method nombre() = self
 
@@ -282,3 +285,28 @@ object melon {
 
 }
 
+object caramelosDeSabores{
+	var peso = 5
+	var gusto=frutilla
+	method nombre() = self
+
+	method precio() {
+		return 1
+	}
+
+	method peso() {
+		return peso
+	}
+
+	method gusto() {
+		return gusto
+	}
+	method gusto(sabor){gusto=sabor}
+	method libreGluten() {
+		return true
+	}
+
+	method mordisco() {
+		peso = peso - 1
+	}
+}
