@@ -4,13 +4,15 @@ object mariano {
 	// para este objeto no damos pistas
 	// definimos algunos métodos para que compile el test
 	var bolsaGolosinas = #{}
-
+	var gustosBolsa	= #{}
 	method comprar(golosina) {
 		bolsaGolosinas.add(golosina)
+		gustosBolsa.add(golosina.gusto())
 	}
 
 	method desechar(golosina) {
 		bolsaGolosinas.remove(golosina)
+			gustosBolsa.remove(golosina.gusto())
 	}
 
 	method golosinas() {
@@ -54,11 +56,12 @@ object mariano {
 
 	method golosinasFaltantes(golosinasDeseadas) {
 		
-		return golosinasDeseadas.differents(bolsaGolosinas)
+		return golosinasDeseadas.difference(bolsaGolosinas)
 		
 	}
 	method gustosFaltantes(gustosDeseados){
-		return bolsaGolosinas.differents(gustosDeseados.maps({golosinas=>golosinas.gusto()}))
+
+		return (gustosDeseados.difference(gustosBolsa))
 	}
 
 	method golosinasQueTiene(gusto) {

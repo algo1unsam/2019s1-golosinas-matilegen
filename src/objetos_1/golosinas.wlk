@@ -268,6 +268,16 @@ object naranja {
 
 object chocolate {
 
+	method siguiente() = vainilla
+
+}
+object vainilla {
+
+	method siguiente() = melon
+
+}
+object melon {
+
 	method siguiente() = frutilla
 
 }

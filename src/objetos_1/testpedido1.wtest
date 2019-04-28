@@ -1,0 +1,25 @@
+import golosinas.*
+import mariano.*
+test "test de golosinas faltantes, mariano" {
+	mariano.comprar(chocolatin)
+	mariano.comprar(caramelo)
+	mariano.comprar(bombon)
+	assert.that(true)
+
+}
+test"golosinas faltantes, que devuelva chupetin"{
+	
+	assert.that(mariano.golosinasFaltantes(#{alfajor,bombon,chocolatin,chupetin}).contains(chupetin))
+}
+test"golosinas faltantes, que devuelva alfajor"{
+	
+	assert.that(mariano.golosinasFaltantes(#{alfajor,bombon,chocolatin,chupetin}).contains(alfajor))
+}
+test"gustos faltantes, que devuelva vainilla"{
+	
+	assert.equals(mariano.gustosFaltantes(#{alfajor,bombon,chocolatin,chupetin}).contains(vainilla))
+}
+test"gustos faltantes, que devuelva melon"{
+	
+	assert.equals(mariano.gustosFaltantes(#{"melon", "chocolate", "frutilla" , "vainilla"}).contains(melon))
+}
